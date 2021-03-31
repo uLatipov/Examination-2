@@ -101,9 +101,64 @@ ol {
             max-width: 58.11px;
             max-height: 20px;
         }
-        .nav-button{
+
+        .menuToggle {
+            color: #fff;
+            padding: 10px 15px;
+            cursor: pointer;
             display: none;
         }
+
+        .icon {
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        .hamburger {
+            width: 40px;
+            height: 4px;
+            transform: translate(-50%, -50%);
+            background: #000;
+            transition: 0.5s;
+            display: inline-block;
+            margin-left: 12px;
+            position: absolute;
+            right: 20px;
+        }
+
+        .hamburger:before,
+        .hamburger:after {
+            content: "";
+            width: 40px;
+            height: 4px;
+            position: absolute;
+            background: #000;
+            transition: 0.5s;
+        }
+
+        .hamburger:before {
+            top: -16px;
+        }
+
+        .hamburger:after {
+            top: 16px;
+        }
+
+        .icon:active .hamburger {
+            background: rgba(0, 0, 0, 0);
+        }
+
+        .icon:active .hamburger:before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        .icon:active .hamburger:after {
+            top: 0;
+            transform: rotate(135deg);
+        }
+
     }
 
     .nav-list {
@@ -113,18 +168,18 @@ ol {
         .nav-link {
             @include texts;
             margin: 0 16px;
-           
-                background:
-                  linear-gradient(currentColor 0 0) bottom -2px   left 50% /var(--a, 0) 2px no-repeat,
-                  linear-gradient(currentColor 0 0) bottom 2px left 50% /var(--b, 0) 2px no-repeat;
-                transition:0.5s;
-              
-              
+
+            background:
+                linear-gradient(currentColor 0 0) bottom -2px left 50% /var(--a, 0) 2px no-repeat,
+                linear-gradient(currentColor 0 0) bottom 2px left 50% /var(--b, 0) 2px no-repeat;
+            transition: 0.5s;
+
+
             &:hover {
                 --a: 60%;
                 --b: 100%;
-              }
-              
+            }
+
         }
 
         .nav-blue {
@@ -198,16 +253,18 @@ ol {
             flex-direction: column;
             align-items: center;
             margin-bottom: 48px;
+
             &:hover {
                 background: #FFFFFF;
                 box-shadow: 0px 12px 21px rgba(0, 0, 0, 0.1);
                 border-radius: 5px;
             }
-    
+
             &:active {
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
                 border-radius: 5px;
             }
+
             .main-strong {
                 font-family: Open Sans;
                 font-style: normal;
@@ -285,7 +342,7 @@ ol {
             }
         }
 
-       
+
     }
 
     .how-box-reverse {
@@ -404,13 +461,16 @@ ol {
 
                 &:hover {
                     color: #00BAFC;
-                    i{
+
+                    i {
                         color: #fff;
                     }
                 }
-                &:active{
+
+                &:active {
                     color: #00BAFC;
-                    i{
+
+                    i {
                         color: rgb(151, 151, 151)
                     }
                 }

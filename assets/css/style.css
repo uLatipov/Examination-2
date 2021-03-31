@@ -33,8 +33,53 @@ ol {
   max-width: 58.11px;
   max-height: 20px;
 }
-.nav .container .nav-button {
+.nav .container .menuToggle {
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
   display: none;
+}
+.nav .container .icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.nav .container .hamburger {
+  width: 40px;
+  height: 4px;
+  transform: translate(-50%, -50%);
+  background: #000;
+  transition: 0.5s;
+  display: inline-block;
+  margin-left: 12px;
+  position: absolute;
+  right: 20px;
+}
+.nav .container .hamburger:before,
+.nav .container .hamburger:after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  position: absolute;
+  background: #000;
+  transition: 0.5s;
+}
+.nav .container .hamburger:before {
+  top: -16px;
+}
+.nav .container .hamburger:after {
+  top: 16px;
+}
+.nav .container .icon:active .hamburger {
+  background: rgba(0, 0, 0, 0);
+}
+.nav .container .icon:active .hamburger:before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.nav .container .icon:active .hamburger:after {
+  top: 0;
+  transform: rotate(135deg);
 }
 .nav .nav-list {
   display: flex;

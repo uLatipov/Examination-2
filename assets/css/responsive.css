@@ -24,9 +24,25 @@
   body .nav .nav-list {
     display: none;
   }
-  body .nav .container .nav-button {
-    display: inline-block;
-    padding: 10px 20px;
+  body .nav .container .menuToggle {
+    display: block;
+  }
+  body .nav .menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    margin-left: -10px;
+    padding-left: 10px;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  body .nav .menu li {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
   }
 }
 @media (max-width: 800px) {
@@ -94,6 +110,11 @@
 
   body .footer-nav .footer-list .copyright-itm {
     width: 100%;
+    margin-right: 0;
+  }
+
+  body .footer-nav .footer-list li {
+    margin-right: 0;
   }
 
   body header iframe {
