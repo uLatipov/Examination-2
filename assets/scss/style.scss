@@ -20,10 +20,16 @@
     border-radius: 5px;
     padding: 8px 16px;
     text-decoration: none;
-    transition: all 0.5s;
+    transition: all .5s;
+    border: 3px solid #00BAFC;
 
     &:hover {
-        background: #005e80;
+        background: #fff;
+        color: #00BAFC;
+    }
+
+    &:active {
+        background: rgba(0, 186, 252, 0.6);
     }
 }
 
@@ -65,6 +71,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 .container {
@@ -94,6 +101,9 @@ ol {
             max-width: 58.11px;
             max-height: 20px;
         }
+        .nav-button{
+            display: none;
+        }
     }
 
     .nav-list {
@@ -103,6 +113,18 @@ ol {
         .nav-link {
             @include texts;
             margin: 0 16px;
+           
+                background:
+                  linear-gradient(currentColor 0 0) bottom -2px   left 50% /var(--a, 0) 2px no-repeat,
+                  linear-gradient(currentColor 0 0) bottom 2px left 50% /var(--b, 0) 2px no-repeat;
+                transition:0.5s;
+              
+              
+            &:hover {
+                --a: 60%;
+                --b: 100%;
+              }
+              
         }
 
         .nav-blue {
@@ -176,7 +198,16 @@ ol {
             flex-direction: column;
             align-items: center;
             margin-bottom: 48px;
-
+            &:hover {
+                background: #FFFFFF;
+                box-shadow: 0px 12px 21px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+            }
+    
+            &:active {
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+            }
             .main-strong {
                 font-family: Open Sans;
                 font-style: normal;
@@ -253,6 +284,8 @@ ol {
                 text-align: left;
             }
         }
+
+       
     }
 
     .how-box-reverse {
@@ -291,9 +324,11 @@ ol {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                label{
+
+                label {
                     width: 100%;
                 }
+
                 width: 100%;
             }
 
@@ -302,7 +337,9 @@ ol {
             border-radius: 5px;
             padding: 24px;
 
-            .myname, .phone-number, .selection {
+            .myname,
+            .phone-number,
+            .selection {
                 width: 100%;
                 padding: 16px;
                 background: #F3F3F3;
@@ -327,13 +364,84 @@ ol {
                 -webkit-appearance: none;
                 position: relative;
                 background: url("../img/arrow.svg") no-repeat right #F3F3F3;
-                background-position:center right 20px;                 
+                background-position: center right 20px;
             }
-            .form-button{
+
+            .form-button {
                 @include linkblue;
-                border: none;
+                border: 3px solid #00BAFC;
                 cursor: pointer;
             }
         }
+    }
+}
+
+.footer-nav {
+    background: #191919;
+    padding: 55px 0;
+
+    .footer-list {
+        display: flex;
+
+        .copyright-itm {
+            width: 30%;
+        }
+
+        li {
+            margin-right: 35px;
+
+            .footer-link,
+            .footer-social-link {
+                @include texts;
+                color: #fff;
+                margin: 4px 0;
+                transition: all 0.5s;
+
+                i {
+                    font-size: 21px;
+                    margin-right: 6px;
+                }
+
+                &:hover {
+                    color: #00BAFC;
+                    i{
+                        color: #fff;
+                    }
+                }
+                &:active{
+                    color: #00BAFC;
+                    i{
+                        color: rgb(151, 151, 151)
+                    }
+                }
+
+            }
+
+            .footer-text {
+                @include texts;
+                color: #fff;
+                margin-top: 20px;
+            }
+
+            .footer-list-links,
+            .footer-social-list {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .footer-strong,
+    .footer-info {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 130%;
+
+        /* identical to box height, or 26px */
+
+        color: #FFFFFF;
+
+
     }
 }
