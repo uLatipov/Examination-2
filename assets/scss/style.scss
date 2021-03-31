@@ -1,15 +1,16 @@
 @mixin texts {
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
     color: #000000;
     margin: 16px 0px;
+    text-decoration: none;
 }
 
 @mixin linkblue {
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -18,10 +19,16 @@
     background: #00BAFC;
     border-radius: 5px;
     padding: 8px 16px;
+    text-decoration: none;
+    transition: all 0.5s;
+
+    &:hover {
+        background: #005e80;
+    }
 }
 
 @mixin footer-bold {
-    font-family: Open Sans;
+    font-family: ' Open Sans';
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -31,10 +38,302 @@
 
 @mixin footer-text {
     text-decoration: none;
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 150%;
     color: #FFFFFF;
+}
+
+@mixin titles {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 130%;
+
+    /* or 31px */
+    text-align: center;
+
+    color: #000000;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+a {
+    display: inline-block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.nav {
+    padding: 18px 0;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav-logo-img {
+            max-width: 58.11px;
+            max-height: 20px;
+        }
+    }
+
+    .nav-list {
+        display: flex;
+        align-items: center;
+
+        .nav-link {
+            @include texts;
+            margin: 0 16px;
+        }
+
+        .nav-blue {
+            @include linkblue;
+        }
+    }
+}
+
+.header {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 80px 0;
+
+        .box {
+            width: 45%;
+
+            .header-title {
+                @include titles;
+            }
+
+            .header-text {
+                @include texts;
+                margin: 16px 0;
+            }
+
+            .header-link {
+                @include linkblue;
+            }
+        }
+
+        iframe {
+            border-radius: 5px;
+        }
+    }
+}
+
+.main {
+    text-align: center;
+    padding: 56px 0;
+
+    .main-text {
+        @include texts;
+        margin: 16px 0;
+    }
+
+    .main-title {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 130%;
+        text-align: center;
+        color: #000000;
+    }
+
+    .main-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+
+        .main-itm {
+            width: 30%;
+            background: #FFFFFF;
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 48px;
+
+            .main-strong {
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 130%;
+                text-align: center;
+                color: #000000;
+                margin: 16px 0;
+            }
+        }
+    }
+
+    .main-blue {
+        @include linkblue;
+    }
+
+    .main-link-non-blue {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        text-decoration-line: underline;
+        color: #00BAFC;
+        margin-left: 16px;
+    }
+}
+
+.how-work {
+    padding: 55px 0;
+
+    .how-title {
+        @include titles;
+    }
+
+    .how-text {
+        @include texts;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .how-box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+
+        .how-box-img {
+            width: 300px;
+            height: auto;
+        }
+
+        .how-box-right {
+            padding: 0 30px;
+            width: 60%;
+
+            .how-strong {
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 130%;
+                text-align: center;
+                color: #000000;
+            }
+
+            .how-text {
+                text-align: left;
+            }
+        }
+    }
+
+    .how-box-reverse {
+        flex-direction: row-reverse;
+    }
+
+    .how-blue {
+        @include linkblue;
+
+    }
+}
+
+.book {
+    background: #00BAFC;
+    padding: 55px 0;
+
+    .book-title {
+        @include titles;
+        color: #fff;
+        text-align: center
+    }
+
+    .book-text {
+        @include texts;
+        color: #fff;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .box-book {
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                label{
+                    width: 100%;
+                }
+                width: 100%;
+            }
+
+            width: 35%;
+            background: #FFFFFF;
+            border-radius: 5px;
+            padding: 24px;
+
+            .myname, .phone-number, .selection {
+                width: 100%;
+                padding: 16px;
+                background: #F3F3F3;
+                border-radius: 5px;
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 150%;
+                text-align: left;
+                color: #000000;
+                border: none;
+                display: block;
+                outline: none;
+                margin-bottom: 16px;
+            }
+
+            .selection {
+                display: block;
+                width: 100%;
+                appearance: none;
+                -webkit-appearance: none;
+                position: relative;
+                background: url("../img/arrow.svg") no-repeat right #F3F3F3;
+                background-position:center right 20px;                 
+            }
+            .form-button{
+                @include linkblue;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
 }
