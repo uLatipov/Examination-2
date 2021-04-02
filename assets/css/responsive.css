@@ -22,28 +22,28 @@
   }
 
   body .nav .nav-list {
-    display: none;
+    flex-wrap: wrap;
+    margin-left: 50px;
   }
-  body .nav .container .menuToggle {
-    display: block;
+  body .nav .nav-list .nav-itm .nav-blue {
+    margin-top: 16px;
   }
-  body .nav .menu {
-    display: none;
-    position: absolute;
-    background: #fff;
+  body .nav .nav-list li {
+    display: inline-block;
+  }
+
+  body .header .container .box {
     width: 100%;
-    margin-left: -10px;
-    padding-left: 10px;
-    top: 60px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: fixed;
   }
-  body .nav .menu li {
-    display: block;
-    text-align: center;
-    margin: 20px 0;
+  body .main .main-list .main-itm {
+    width: 45%;
+  }
+  body .main .main-list {
+    margin-top: 50px;
+  }
+
+  body .book .container .box-book {
+    width: 50%;
   }
 }
 @media (max-width: 800px) {
@@ -87,8 +87,34 @@
     width: 90%;
   }
 
+  body nav .container .wrapper .menuToggle {
+    display: block;
+  }
+  body nav .container .wrapper .menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    margin-left: -10px;
+    padding-left: 10px;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+  }
+  body nav .container .wrapper .menu li {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .how-work .container .how-box:nth-child(odd) {
+    margin-left: 0;
+  }
   .how-work .container .how-box {
     flex-direction: column;
+    margin-left: 0;
   }
   .how-work .container .how-box .how-box-right {
     width: 100%;

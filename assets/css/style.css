@@ -4,6 +4,7 @@
   box-sizing: border-box;
   -webkit-user-select: none;
           user-select: none;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -85,6 +86,9 @@ ol {
   display: flex;
   align-items: center;
 }
+.nav .nav-list li {
+  display: inline-block;
+}
 .nav .nav-list .nav-link {
   font-family: "Open Sans";
   font-style: normal;
@@ -95,12 +99,14 @@ ol {
   margin: 16px 0px;
   text-decoration: none;
   margin: 0 16px;
-  background: linear-gradient(currentColor 0 0) bottom -2px left 50%/var(--a, 0) 2px no-repeat, linear-gradient(currentColor 0 0) bottom 2px left 50%/var(--b, 0) 2px no-repeat;
-  transition: 0.5s;
+  background: linear-gradient(currentColor 0 0) var(--p, 50%) 100%/var(--d, 10%) 3px no-repeat;
+  transition: 0.3s, background-position 0s;
+  padding: 4px 0;
 }
 .nav .nav-list .nav-link:hover {
-  --a: 60%;
-  --b: 100%;
+  --d: 100%;
+  --p: 0%;
+  transition: 0.3s, background-size 0.3s 0.3s;
 }
 .nav .nav-list .nav-blue {
   font-family: "Open Sans";
@@ -306,6 +312,10 @@ ol {
   display: flex;
   align-items: center;
   margin-bottom: 50px;
+  justify-content: center;
+}
+.how-work .how-box:nth-child(odd) {
+  margin-left: 75px;
 }
 .how-work .how-box .how-box-img {
   width: 300px;
@@ -313,7 +323,7 @@ ol {
 }
 .how-work .how-box .how-box-right {
   padding: 0 30px;
-  width: 60%;
+  width: 50%;
 }
 .how-work .how-box .how-box-right .how-strong {
   font-family: Open Sans;
@@ -386,6 +396,7 @@ ol {
   align-items: center;
 }
 .book .container .box-book {
+  margin-top: 5%;
   width: 35%;
   background: #FFFFFF;
   border-radius: 5px;
