@@ -146,8 +146,8 @@ ol {
   font-size: 24px;
   line-height: 130%;
   /* or 31px */
-  text-align: center;
   color: #000000;
+  text-align: left;
 }
 .header .container .box .header-text {
   font-family: "Open Sans";
@@ -289,7 +289,6 @@ ol {
   font-size: 24px;
   line-height: 130%;
   /* or 31px */
-  text-align: center;
   color: #000000;
 }
 .how-work .how-text {
@@ -373,7 +372,6 @@ ol {
   font-size: 24px;
   line-height: 130%;
   /* or 31px */
-  text-align: center;
   color: #000000;
   color: #fff;
   text-align: center;

@@ -60,7 +60,6 @@
     line-height: 130%;
 
     /* or 31px */
-    text-align: center;
 
     color: #000000;
 
@@ -204,6 +203,7 @@ ol {
 
             .header-title {
                 @include titles;
+                text-align: left
             }
 
             .header-text {

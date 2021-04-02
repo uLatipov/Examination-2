@@ -87,6 +87,10 @@
     width: 90%;
   }
 
+  body .header .container .box .header-title {
+    text-align: center;
+  }
+
   body nav .container .wrapper .menuToggle {
     display: block;
   }
