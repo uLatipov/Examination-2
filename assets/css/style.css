@@ -214,6 +214,7 @@ ol {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+  margin-top: 35px;
 }
 .main .main-list .main-itm {
   width: 30%;
